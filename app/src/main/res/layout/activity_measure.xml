@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.MeasureActivity" android:background="@android:color/background_dark">
+
+    <Button
+            android:text="NEXT   ▶"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/buttonNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            style="@style/Widget.AppCompat.Button" android:backgroundTint="@color/colorWaterBlue"
+            android:textColor="@android:color/white" android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"/>
+    <Button
+            android:text="◀   UNDO"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/buttonUndo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            style="@style/Widget.AppCompat.Button" android:backgroundTint="@color/colorWaterBlue"
+            android:textColor="@android:color/white" android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp" android:layout_marginStart="4dp"
+    />
+
+    <RelativeLayout android:id="@+id/layoutRelative"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toBottomOf="@id/buttonUndo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="8dp" android:layout_marginBottom="8dp">
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/imageViewCapture"
+                   android:scaleType="centerInside"
+                   android:adjustViewBounds="true"
+                   android:layout_centerInParent="true"/>
+
+        <jp.co.avancesys.clothesmeasure.view.widget.PointerImageView
+                android:id="@+id/pointer1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_pointer"
+                android:layout_alignParentTop="true"/>
+
+        <jp.co.avancesys.clothesmeasure.view.widget.PointerImageView
+                android:id="@+id/pointer2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="100dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_pointer"
+                android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline"
+                                          android:orientation="vertical"
+                                          app:layout_constraintGuide_percent="0.5"/>
+
+
+</android.support.constraint.ConstraintLayout>
