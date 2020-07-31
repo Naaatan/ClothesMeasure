@@ -1,2 +1,4 @@
 # ClothesMeasure
-An application that measures clothes
+
+服のサイズを計測するアプリケーションです。
+身長をもとに着丈、肩幅、袖丈、身幅の概算値を算出します。
